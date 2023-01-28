@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         startButton.layer.cornerRadius = 10
         
         redLight.alpha = lightIsOff
@@ -37,14 +35,14 @@ class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-          redLight.layer.cornerRadius = redLight.frame.width / 2
-          yellowLight.layer.cornerRadius = redLight.frame.width / 2
-          greenLight.layer.cornerRadius = redLight.frame.width / 2
-          
-          print("Размер стороны, доступный в методе viewWillLayoutSubviews: \(redLight.frame.height)")
-      }
-    
-    @IBAction func startButtonPressed(_ sender: Any) {
+        redLight.layer.cornerRadius = redLight.frame.width / 2
+        yellowLight.layer.cornerRadius = redLight.frame.width / 2
+        greenLight.layer.cornerRadius = redLight.frame.width / 2
+        
+        print("Размер стороны, доступный в методе viewWillLayoutSubviews: \(redLight.frame.height)")
+    }
+
+    @IBAction func startButtonPressed() {
         if startButton.currentTitle == "START" {
                 startButton.setTitle("Next signal", for: .normal)
             }
@@ -65,6 +63,5 @@ class ViewController: UIViewController {
             }
     }
     
-  
 
 }
