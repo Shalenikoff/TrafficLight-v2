@@ -12,7 +12,7 @@ enum CurrentLight {
 }
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var redLight: UIView!
     @IBOutlet var yellowLight: UIView!
     @IBOutlet var greenLight: UIView!
@@ -39,26 +39,26 @@ class ViewController: UIViewController {
         
         // print("Размер стороны, доступный в методе viewDidLoad: \(redLight.frame.height)")
     }
-
-    @IBAction func startButtonPressed() {
-        if startButton.currentTitle == "Start" {
-            startButton.setTitle("Next signal", for: .normal)
-        }
     
-        switch currentLight {
-        case .red:
-            greenLight.alpha = lightIsOff
-            redLight.alpha = lightIsOn
-            currentLight = .yellow
-        case .yellow:
-            redLight.alpha = lightIsOff
-            yellowLight.alpha = lightIsOn
-            currentLight = .green
-        case .green:
-            yellowLight.alpha = lightIsOff
-            greenLight.alpha = lightIsOn
-            currentLight = .red
-        }
-    }
-}
+    @IBAction func startButtonPressed(_ sender: Any) {
+        if startButton.currentTitle == "START" {
+                startButton.setTitle("Next signal", for: .normal)
+            }
 
+            switch currentLight {
+            case .red:
+                greenLight.alpha = lightIsOff
+                redLight.alpha = lightIsOn
+                currentLight = .yellow
+            case .yellow:
+                redLight.alpha = lightIsOff
+                yellowLight.alpha = lightIsOn
+                currentLight = .green
+            case .green:
+                yellowLight.alpha = lightIsOff
+                greenLight.alpha = lightIsOn
+                currentLight = .red
+            }
+    }
+    
+}
