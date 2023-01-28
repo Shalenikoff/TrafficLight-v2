@@ -33,12 +33,16 @@ class ViewController: UIViewController {
         yellowLight.alpha = lightIsOff
         greenLight.alpha = lightIsOff
         
-        redLight.layer.cornerRadius = redLight.frame.width / 2
-        yellowLight.layer.cornerRadius = redLight.frame.width / 2
-        greenLight.layer.cornerRadius = redLight.frame.width / 2
-        
-        // print("Размер стороны, доступный в методе viewDidLoad: \(redLight.frame.height)")
+        print("Размер стороны, доступный в методе viewDidLoad: \(redLight.frame.height)")
     }
+    
+    override func viewWillLayoutSubviews() {
+          redLight.layer.cornerRadius = redLight.frame.width / 2
+          yellowLight.layer.cornerRadius = redLight.frame.width / 2
+          greenLight.layer.cornerRadius = redLight.frame.width / 2
+          
+          print("Размер стороны, доступный в методе viewWillLayoutSubviews: \(redLight.frame.height)")
+      }
     
     @IBAction func startButtonPressed(_ sender: Any) {
         if startButton.currentTitle == "START" {
@@ -61,4 +65,6 @@ class ViewController: UIViewController {
             }
     }
     
+  
+
 }
