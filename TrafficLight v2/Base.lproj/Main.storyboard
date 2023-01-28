@@ -49,6 +49,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ue3-qt-7Lo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,6 +67,13 @@
                             <constraint firstItem="edp-mj-AuW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wf0-IL-SP8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="RedLight" destination="SOa-gP-LlD" id="iMy-ay-5jh"/>
+                        <outlet property="greenLight" destination="RZ4-ia-eEJ" id="Hdy-6x-ROn"/>
+                        <outlet property="redLight" destination="SOa-gP-LlD" id="pAw-jc-4n2"/>
+                        <outlet property="startButton" destination="gRf-OA-Bav" id="cA1-5F-5yh"/>
+                        <outlet property="yellowLight" destination="edp-mj-AuW" id="Reb-bt-Bdq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
